@@ -49,10 +49,10 @@ const byte CONTRAST = 1;	// Contrast
 const byte SERIAL_LO = 2;	// Serial number low byte
 const byte SERIAL_HI = 3;	// Serial number high byte
 
-// IO
-const byte GPIO = 13;		// Built in LED on Nano V3.0
-const byte backLight = 10;	// Use PWM to change brightness
-const byte contrast = 3;    // Use PWM to change contrast  Connect 100uF between pin and GND
+// IO Pins
+const byte GPIO = 13;		// D13 - Built in LED on Nano V3.0
+const byte backLight = 10;	// D10 - Use PWM to change brightness
+const byte contrast = 3;    // D3  - Use PWM to change contrast  Connect 100uF between pin and GND
 
 // Variables used in code - can probably optimise some of these out....
 byte rxbyte;
@@ -67,6 +67,7 @@ byte data[8];  // buffer for user character data
 // LiquidCrystal(rs, rw, enable, d4, d5, d6, d7) 
 LiquidCrystal lcd(4, 5, 6, 8, 9, 11, 12);
 
+// Setup
 void setup() {
 	// Set the use ouf our output pins
 	pinMode(GPIO, OUTPUT);
@@ -149,9 +150,7 @@ byte serial_getch(){
 	return (byte)(ch & 0xff);
 }
 
-
 // Main loop - note we come into it with rxbyte already set from exit of Setup() function
-
 void loop(){
 	if (rxbyte == 254) //Matrix Orbital uses 254 prefix for commands
 	{
@@ -316,22 +315,7 @@ void loop(){
 		switch (rxbyte)
 		{
 			//chars that have direct equivalent in LCD charmap
-			/*            case 0x67: //g
-			rxbyte = 0xE7;
-			break;
-			case 0x6A: //j
-			rxbyte = 0xEA;
-			break;
-			case 0x70: //p
-			rxbyte = 0xF0;
-			break;
-			case 0x71: //q
-			rxbyte = 0xF1;
-			break;
-			case 0x79: //y
-			rxbyte = 0xF9;
-			break;
-			*/  case 0xE4: //ASCII "a" umlaut
+			case 0xE4: //ASCII "a" umlaut
 				rxbyte = 0xE1;
 				break;
 			case 0xF1: //ASCII "n" tilde
@@ -441,6 +425,5 @@ void loop(){
 		// By now either special character is converted or it was printable already
 		lcd.print((char)rxbyte);  //print it to lcd
 	}
-
 	rxbyte = serial_getch();    // Wait for the next byte and use value for next iteration
 }
