@@ -1,7 +1,7 @@
 Matrix
 ======
 
-Matrix Orbital Emulated Arduino HD44780 Device
+Matrix Orbital Emulated Arduino HD44780 Device for Arduino Nano V3.0
 
 Breadboard
 
