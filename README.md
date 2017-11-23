@@ -10,6 +10,8 @@ Modified contrast control and added stand-by after 11 second/auto-resume.
 
 Also Included a small python script to send OpenHardwareMonitor data to the lcd.(see other repository for windows c sharp app(uncomplete))
 
+And working on a C sharp app see detail here: https://github.com/Tek465B/OHM_To_MatrixO
+
 ![Breadboard](http://s10.postimg.org/roe0sj1ll/tisplay_breadboard.png)
 
 Circuit Diagram
