@@ -7,6 +7,7 @@ Edit: Do not use a capacitor for Contrast just connect it to the pin directly fo
 I recommend using a small NPN transistor to drive the backlight, emitter to ground, collector to backlight anode and base connected with a small resistor to the uC BackLight PIN(i use BC337 and 12k resistor).
 
 Modified contrast control and added stand-by after 11 second/auto-resume.
+
 Also Included a small python script to send OpenHardwareMonitor data to the lcd.(see other repository for windows c sharp app(uncomplete))
 
 ![Breadboard](http://s10.postimg.org/roe0sj1ll/tisplay_breadboard.png)
