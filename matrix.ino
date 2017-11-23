@@ -224,6 +224,8 @@ void loop() {
 			lcd.command(0b00001110);
 			break;
 		case 75:  //underline cursor off
+			lcd.command(0b00001100);
+			break;
 		case 84:  //block cursor off
 			lcd.command(0b00001100);
 			break;
@@ -322,6 +324,16 @@ void loop() {
 			level = serial_getch();
 			analogWrite(backLight, level);
 			break;
+		case 198: //Send byte command to lcd
+			temp = serial_getch();
+			lcd.command(temp);
+			break;
+		/*case 198: //Scroll Left
+			lcd.command(0b00011000); //dec 28
+			break;
+		case 198: //Scroll Right
+			lcd.command(0b00011100); // dec 24
+			break;*/
 		default:
 			//all other commands ignored and parameter byte discarded
 			temp = serial_getch();  //dump the command code
