@@ -9,9 +9,7 @@ I recommend using a small NPN transistor to drive the backlight, emitter to grou
 Modified contrast control and added stand-by after 11 second/auto-resume on Serial receive.
 
 Also Included a small python script to send OpenHardwareMonitor data to the lcd.
-Also Making a C# App(work in progress): https://github.com/Tek465B/OHM_To_MatrixO/blob/master/README.md
-
-And working on a C sharp app see detail here: https://github.com/Tek465B/OHM_To_MatrixO
+Also Making a C# App(work in progress): https://github.com/Tek465B/OHM_To_MatrixO
 
 ![Breadboard](http://s10.postimg.org/roe0sj1ll/tisplay_breadboard.png)
 
