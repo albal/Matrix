@@ -8,8 +8,6 @@ I recommend using a small NPN transistor to drive the backlight, emitter to grou
 
 Modified contrast control and added stand-by after 11 second/auto-resume on Serial receive.
 
-Also Included a small python script to send OpenHardwareMonitor data to the lcd.
-
 
 ![Breadboard](http://s10.postimg.org/roe0sj1ll/tisplay_breadboard.png)
 
