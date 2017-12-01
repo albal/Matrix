@@ -10,7 +10,6 @@ Modified contrast control and added stand-by after 11 second/auto-resume on Seri
 
 Also Included a small python script to send OpenHardwareMonitor data to the lcd.
 
-Also Making a C# App(work in progress): https://github.com/Tek465B/OHM_To_MatrixO
 
 ![Breadboard](http://s10.postimg.org/roe0sj1ll/tisplay_breadboard.png)
 
